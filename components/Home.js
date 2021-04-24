@@ -80,8 +80,12 @@ function SingleCat({heading, url, navigation}) {
         />
       )}
       {data.length == 0 && (
-        <View style={{height: Dimensions.get('window').height * 0.2}}>
-          <ActivityIndicator color="#8B0000" />
+        <View
+          style={{
+            height: Dimensions.get('window').height * 0.3,
+            justifyContent: 'center',
+          }}>
+          <ActivityIndicator color="#8B0000" size={'large'} />
         </View>
       )}
     </>

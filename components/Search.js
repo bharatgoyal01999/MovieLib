@@ -31,7 +31,9 @@ export const SearchTile = ({imgSrc, title, navigation, data, date}) => {
       />
       <View>
         <Text style={styles.searchTitle}>{title}</Text>
-        <Text style={styles.searchTitle}>{date}</Text>
+        <Text style={{...styles.searchTitle, color: 'rgba(0,0,0,0.4)'}}>
+          {date}
+        </Text>
       </View>
     </TouchableOpacity>
   );
@@ -68,6 +70,7 @@ export default function Search({navigation}) {
             <SearchTile
               navigation={navigation}
               data={item}
+              key={item.id}
               imgSrc={
                 'https://image.tmdb.org/t/p/w200' + item.item['poster_path']
               }
